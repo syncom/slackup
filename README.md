@@ -10,16 +10,25 @@ To see how to send a Slack message from a Google form, see the GitHub repo
 ## Usage
 
 1. Install the [Incoming Webhooks
-application](https://api.slack.com/incoming-webhooks) in your Slack workspace. Obtain the associated webhook URL.
+application](https://api.slack.com/incoming-webhooks) in your Slack
+workspace. Obtain the associated webhook URL.
 
-2. Before the first use, edit [.config](./.config) to update values for
+2. Clone the repository.
+
+    ```bash
+    git clone https://github.com/syncom/slackup.git
+    ```
+
+3. Before the first use, edit [.config](./.config) to update values for
 configuration entries `webhook_url`, `username`, and `channel`, where
     - `webhook_url` is the webhook URL we have obtained
-    - `username` is the system username under which the script is run. Note that this entry must match the runtime username, otherwise an error shall occur
+    - `username` is the system username under which the script is run. Note
+    that this entry must match the runtime username, otherwise an error
+    shall occur
     - `channel` is the name of the Slack channel to which the update message
     is sent. It is of the form #channel_name
 
-3. Run `python3 slackup.py` from command line, and enter the status update
+4. Run `python3 slackup.py` from command line, and enter the status update
 message upon prompt. The synopsis is as follows.
 
     ```bash
